@@ -37,9 +37,9 @@ module "dcos-forwarding-rules" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
+| cluster_name | Cluster Name | string | - | yes |
 | masters_additional_rules | Additional list of rules for masters. These Rules are an additon to the default rules. | string | `<list>` | no |
 | masters_self_link | List of master instances self links | list | `<list>` | no |
-| name_prefix | Cluster Name | string | - | yes |
 | public_agents_additional_rules | Additional list of rules for public agents. These Rules are an additon to the default rules. | string | `<list>` | no |
 | public_agents_self_link | List of public agent instances self links | list | `<list>` | no |
 

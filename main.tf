@@ -38,7 +38,7 @@ module "dcos-forwarding-rule-masters" {
   source  = "dcos-terraform/compute-forwarding-rule-masters/gcp"
   version = "~> 0.0"
 
-  name_prefix = "${var.name_prefix}"
+  cluster_name = "${var.cluster_name}"
 
   masters_self_link = ["${var.masters_self_link}"]
   additional_rules  = ["${var.masters_additional_rules}"]
@@ -50,7 +50,7 @@ module "dcos-forwarding-rule-public-agents" {
 
   source = "../terraform-gcp-compute-forwarding-rule-public-agents"
 
-  name_prefix = "${var.name_prefix}"
+  cluster_name = "${var.cluster_name}"
 
   public_agents_self_link = ["${var.public_agents_self_link}"]
   additional_rules        = ["${var.public_agents_additional_rules}"]
