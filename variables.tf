@@ -23,3 +23,9 @@ variable "masters_additional_rules" {
   description = "Additional list of rules for masters. These Rules are an additon to the default rules."
   default     = []
 }
+
+variable "labels" {
+  description = "Add custom labels to all resources"
+  type        = "map"
+  default     = {}
+}

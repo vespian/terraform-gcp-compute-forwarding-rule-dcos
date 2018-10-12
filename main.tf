@@ -42,6 +42,8 @@ module "dcos-forwarding-rule-masters" {
 
   masters_self_link = ["${var.masters_self_link}"]
   additional_rules  = ["${var.masters_additional_rules}"]
+
+  labels = "${var.labels}"
 }
 
 module "dcos-forwarding-rule-public-agents" {
@@ -54,4 +56,6 @@ module "dcos-forwarding-rule-public-agents" {
 
   public_agents_self_link = ["${var.public_agents_self_link}"]
   additional_rules        = ["${var.public_agents_additional_rules}"]
+
+  labels = "${var.labels}"
 }
