@@ -1,5 +1,5 @@
 variable "cluster_name" {
-  description = "Cluster Name"
+  description = "Name of the DC/OS cluster"
 }
 
 variable "public_agents_self_link" {
