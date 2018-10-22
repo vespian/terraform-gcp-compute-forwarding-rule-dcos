@@ -26,7 +26,6 @@ module "dcos-forwarding-rules" {
 
   cluster_name = "production"
 
-  subnet_ids = ["subnet-12345678"]
   masters_self_link = ["${module.masters.instances_self_link}"]
   public_agents_self_link = ["${module.public_agents.instances_self_link}"]
 }
