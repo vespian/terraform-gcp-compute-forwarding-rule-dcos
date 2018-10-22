@@ -26,7 +26,6 @@ module "dcos-forwarding-rules" {
 
   cluster_name = "production"
 
-  subnet_ids = ["subnet-12345678"]
   masters_self_link = ["${module.masters.instances_self_link}"]
   public_agents_self_link = ["${module.public_agents.instances_self_link}"]
 }
@@ -37,7 +36,7 @@ module "dcos-forwarding-rules" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| cluster_name | Cluster Name | string | - | yes |
+| cluster_name | Name of the DC/OS cluster | string | - | yes |
 | labels | Add custom labels to all resources | map | `<map>` | no |
 | masters_additional_rules | Additional list of rules for masters. These Rules are an additon to the default rules. | string | `<list>` | no |
 | masters_self_link | List of master instances self links | list | `<list>` | no |
