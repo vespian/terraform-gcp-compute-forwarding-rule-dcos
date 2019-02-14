@@ -32,6 +32,8 @@
  * }
  *```
  */
+     
+provider "google" {}
 
 module "dcos-forwarding-rule-masters" {
   source  = "dcos-terraform/compute-forwarding-rule-masters/gcp"
@@ -43,6 +45,10 @@ module "dcos-forwarding-rule-masters" {
   additional_rules  = ["${var.masters_additional_rules}"]
 
   labels = "${var.labels}"
+  
+  providers = {
+    google = "google"
+  }
 }
 
 module "dcos-forwarding-rule-public-agents" {
@@ -57,4 +63,8 @@ module "dcos-forwarding-rule-public-agents" {
   additional_rules        = ["${var.public_agents_additional_rules}"]
 
   labels = "${var.labels}"
+  
+  providers = {
+    google = "google"
+  }
 }
