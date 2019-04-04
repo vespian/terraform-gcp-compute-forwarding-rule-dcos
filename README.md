@@ -31,22 +31,21 @@ module "dcos-forwarding-rules" {
 }
 ```
 
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| cluster_name | Name of the DC/OS cluster | string | - | yes |
+| cluster\_name | Name of the DC/OS cluster | string | n/a | yes |
 | labels | Add custom labels to all resources | map | `<map>` | no |
-| masters_additional_rules | Additional list of rules for masters. These Rules are an additon to the default rules. | string | `<list>` | no |
-| masters_self_link | List of master instances self links | list | `<list>` | no |
-| public_agents_additional_rules | Additional list of rules for public agents. These Rules are an additon to the default rules. | string | `<list>` | no |
-| public_agents_self_link | List of public agent instances self links | list | `<list>` | no |
+| masters\_additional\_rules | Additional list of rules for masters. These Rules are an additon to the default rules. | list | `<list>` | no |
+| masters\_self\_link | List of master instances self links | list | `<list>` | no |
+| public\_agents\_additional\_rules | Additional list of rules for public agents. These Rules are an additon to the default rules. | list | `<list>` | no |
+| public\_agents\_self\_link | List of public agent instances self links | list | `<list>` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| masters_ip_address | IP Address of master load balancer |
-| public_agents_ip_address | IP Address of public agents load balancer |
+| masters\_ip\_address | IP Address of master load balancer |
+| public\_agents\_ip\_address | IP Address of public agents load balancer |
 
