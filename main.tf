@@ -32,7 +32,7 @@
  * }
  *```
  */
-     
+
 provider "google" {}
 
 module "dcos-forwarding-rule-masters" {
@@ -45,7 +45,7 @@ module "dcos-forwarding-rule-masters" {
   additional_rules  = ["${var.masters_additional_rules}"]
 
   labels = "${var.labels}"
-  
+
   providers = {
     google = "google"
   }
@@ -63,7 +63,7 @@ module "dcos-forwarding-rule-public-agents" {
   additional_rules        = ["${var.public_agents_additional_rules}"]
 
   labels = "${var.labels}"
-  
+
   providers = {
     google = "google"
   }
