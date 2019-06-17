@@ -30,6 +30,11 @@ variable "labels" {
   default     = {}
 }
 
+variable "name_prefix" {
+  description = "Name Prefix"
+  default     = ""
+}
+
 variable "disable_masters" {
   description = "[MASTERS] Do not create load balancer and its resources"
   default     = false
