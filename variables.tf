@@ -29,3 +29,13 @@ variable "labels" {
   type        = "map"
   default     = {}
 }
+
+variable "disable_masters" {
+  description = "[MASTERS] Do not create load balancer and its resources"
+  default     = false
+}
+
+variable "disable_public_agents" {
+  description = "[PUBLIC AGENTS] Do not create load balancer and its resources"
+  default     = false
+}
