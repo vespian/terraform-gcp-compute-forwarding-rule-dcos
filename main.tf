@@ -57,8 +57,6 @@ module "dcos-forwarding-rule-public-agents" {
   source  = "dcos-terraform/compute-forwarding-rule-public-agents/gcp"
   version = "~> 0.2.0"
 
-  source = "../terraform-gcp-compute-forwarding-rule-public-agents"
-
   cluster_name = "${var.cluster_name}"
   name_prefix  = "${var.name_prefix}"
   disable      = "${var.disable_public_agents}"
