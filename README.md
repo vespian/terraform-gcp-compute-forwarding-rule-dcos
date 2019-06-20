@@ -36,9 +36,12 @@ module "dcos-forwarding-rules" {
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | cluster\_name | Name of the DC/OS cluster | string | n/a | yes |
+| disable\_masters | [MASTERS] Do not create load balancer and its resources | string | `"false"` | no |
+| disable\_public\_agents | [PUBLIC AGENTS] Do not create load balancer and its resources | string | `"false"` | no |
 | labels | Add custom labels to all resources | map | `<map>` | no |
 | masters\_additional\_rules | Additional list of rules for masters. These Rules are an additon to the default rules. | list | `<list>` | no |
 | masters\_self\_link | List of master instances self links | list | `<list>` | no |
+| name\_prefix | Name Prefix | string | `""` | no |
 | public\_agents\_additional\_rules | Additional list of rules for public agents. These Rules are an additon to the default rules. | list | `<list>` | no |
 | public\_agents\_self\_link | List of public agent instances self links | list | `<list>` | no |
 
