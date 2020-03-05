@@ -44,3 +44,8 @@ variable "disable_public_agents" {
   description = "[PUBLIC AGENTS] Do not create load balancer and its resources"
   default     = false
 }
+
+variable "adminrouter_grpc_proxy_port" {
+  description = ""
+  default     = 12379
+}

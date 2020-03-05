@@ -45,6 +45,7 @@ module "dcos-forwarding-rule-masters" {
 
   masters_self_link = ["${var.masters_self_link}"]
   additional_rules  = ["${var.masters_additional_rules}"]
+  adminrouter_grpc_proxy_port = "${var.adminrouter_grpc_proxy_port}"
 
   labels = "${var.labels}"
 
